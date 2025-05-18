@@ -1,4 +1,4 @@
-from schemas.movies import (
+from src.schemas.movies import (
     MovieDetailResponseSchema,
     MovieListResponseSchema
 )
