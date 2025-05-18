@@ -2,7 +2,6 @@ from typing import List
 from urllib.request import Request
 
 from fastapi import APIRouter, Depends, HTTPException, Query
-from fastapi.responses import JSONResponse
 from sqlalchemy import select, func
 from sqlalchemy.ext.asyncio import AsyncSession
 
@@ -11,11 +10,6 @@ from src.schemas.movies import MovieDetailResponseSchema, MovieListResponseSchem
 
 router = APIRouter()
 
-
-# @router.get("/movies/", response_model=List[MoviesGet])
-# async def get_movies(db: AsyncSession = Depends(get_db)):
-#     movies = await db.execute(select(MovieModel))
-#     return movies.scalars().all()
 
 @router.get("/movies/", response_model=MovieListResponseSchema)
 async def get_movies(

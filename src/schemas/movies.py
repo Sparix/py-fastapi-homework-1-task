@@ -1,4 +1,3 @@
-# Write your code here
 import datetime
 from typing import List, Optional
 
